@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load resources_extras %}
+{% block content %}
+    <h1>Primeiro Template {{course_name}}</h1>
+    {% for aluno in alunos_list %}
+      <li>{{ aluno.name | replace:"ão" }}</li>
+    {% endfor %}
+{% endblock %}
