@@ -7,9 +7,8 @@
       <li>{{ aluno.name | replace:"ão" }}</li>
     {% endfor %}
 
-    {% get_vehicles 3 as vehicle_entries %}
+    {% get_vehicles 4 as vehicle_entries %}
       {% for item in vehicle_entries %}
         <p>{{item}} </p>
       {% endfor %}
-    {% endblock % }
 {% endblock %}
