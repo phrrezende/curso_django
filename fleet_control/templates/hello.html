@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 {% load resources_extras %}
+{% load vehicle_tags %}
 {% block content %}
     <h1>Primeiro Template {{course_name}}</h1>
     {% for aluno in alunos_list %}
       <li>{{ aluno.name | replace:"ão" }}</li>
     {% endfor %}
+
+    {% get_vehicles 4 as vehicle_entries %}
+      {% for item in vehicle_entries %}
+        <p>{{item}} </p>
+      {% endfor %}
 {% endblock %}
